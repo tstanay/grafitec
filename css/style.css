@@ -1,0 +1,238 @@
+html, body {
+    background-color: #ffffff;
+    font-weight: 300;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+ul, ol {
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.sidebar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 460px;
+    height: 100%;
+    background: #fff;
+    transform: translate3d(0,0,0);
+    transition: transform .28s ease-in-out;
+    will-change: transform;
+    border-right: solid 1px #00544e;
+    z-index: 999;
+}
+.sidebar-brand{
+    color: #fff;
+    font-weight: 700;
+    font-size: 4.0rem;
+    background: #00544e;
+    padding: 20px 10px 0 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.sidebar-brand:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00544e;
+    border-bottom: solid 3px #00544e;
+    transform: skew(0deg, -14deg);
+    left: 0;
+    bottom: -58px;
+    z-index: -1;
+}
+
+.sidebar-nav-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: 150px;
+}
+.sidebar-nav-inner li{
+    margin-bottom: 66px;
+}
+.sidebar-nav-inner li a {
+    font-size: 1.3rem;
+    display: block;
+    text-decoration: none;
+    color: #414141;
+    padding: 5px;
+    text-align: center;
+}
+.sidebar-contact{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    background: #1f0000;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    width: 100%;
+}
+/*------------------*/
+#home {
+    position: relative;
+    height: 100%;
+    margin-left: 460px;
+}
+#home.home-bg-static {
+    background-image: url("../img/kuala-lumpur-1820944_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg-overlay:before{
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,.3) !important;
+}
+.page-title p{
+    color: #ffffff;
+    font-size: 3rem;
+    padding: 40px 27px 0 0;
+    font-weight: 100;
+}
+.date-style{
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.bnt-main{
+    background: #008bff;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50px;
+}
+.block-inform{
+    position: absolute;
+    bottom: 40px;
+    left:0;
+    right: 0;
+}
+.sl-date{
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-style: italic;
+}
+.block-inform a.more-info{
+    display: inline-block;
+    color: #fff;
+    border-bottom: dotted 1px;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 43px;
+}
+.block-inform a.more-info:hover{
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+/*-----------------*/
+#wrap_footer{
+    margin-left: 460px;
+}
+.avatar img{
+    height: auto;
+    width: 100%;
+    display: inline-block;
+}
+footer h4{
+    color: #000;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 300;
+}
+footer h4:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    line-height: 0;
+    border-bottom: solid 2px #00544e;
+    left: 0;
+    bottom: 0;
+}
+footer .box-description{
+    color: #00544e;
+    font-size: 1rem;
+}
+footer p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 70px;
+}
+.bnt-main-small{
+    background: #008bff;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 100;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 50px;
+}
+
+
+@media (max-width: 1024px) and (min-width: 992px) {
+
+    .sidebar-brand{
+        font-size: 2rem;
+    }
+    .sidebar-nav-inner{
+        top: 40%;
+    }
+    .sidebar-nav-inner li {
+        margin-bottom: 0;
+    }
+
+}
+@media (min-width: 992px)  {
+    #home {
+        height: calc(100% - 338px);
+    }
+}
+@media (min-width: 40rem) and (max-width: 59rem){
+    .sidebar{
+        transform: translate3d(-100%,0,0);
+    }
+    #home, #wrap_footer{
+        margin-left: 0;
+    }
+    footer h4, footer .box-description{
+        text-align: center;
+    }
+    footer h4::after{
+        left:38%;
+    }
+    .page-title p{
+        display: none;
+    }
+    .sidebar-nav-inner li {
+        margin-bottom: 0;
+    }
+    .sidebar-brand{
+        font-size: 2rem;
+    }
+}
